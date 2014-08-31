@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+
+    <table-filter match-schema="SCHEMA" match-name="XML_TABLE"/>
+
+    <table schema="SCHEMA" name="XML_TABLE">
+        <column name="CONTENT" jdbc-type="CLOB" type="org.nathan.hibernateXMLType.types.HibernateXMLStringType"/>
+    </table>
+
+</hibernate-reverse-engineering>

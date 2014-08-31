@@ -1,0 +1,20 @@
+<project name="BusinessDatabaseAccess" default="generate" basedir="../" >
+    <description>
+        Hibernate Reverse Engineering Script
+    </description>
+
+    <taskdef name="hibernatetool" classname="org.hibernate.tool.ant.HibernateToolTask"/>
+     <target name="generate">
+        <hibernatetool>
+            <jdbcconfiguration
+                    configurationfile="${configurationfile}"
+                    packagename="${packagename}"
+                    revengfile="${revengfile}"
+                    detectmanytomany="true"/>
+
+            <hbm2java destdir="src/main/generated"/>
+        	<hbm2hbmxml destdir="src/main/resources/mapping" /> 
+        </hibernatetool>
+     </target>
+</project>
+
